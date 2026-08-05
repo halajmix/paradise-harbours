@@ -7,7 +7,7 @@
 <meta name="description" content="Paradise Harbours SPC (CR: 1615460) builds next-generation AI-powered platforms that empower small businesses and entrepreneurs to scale, automate workflows, and take control of their operations. Al Seeb, Muscat, Sultanate of Oman." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Noto+Kufi+Arabic:wght@400;600&display=swap" rel="stylesheet" />
 <style>
   :root {
     --bg-0: #060a14;
@@ -15,17 +15,18 @@
     --bg-2: #101a2e;
     --surface: rgba(255, 255, 255, 0.045);
     --surface-strong: rgba(255, 255, 255, 0.08);
-    --border: rgba(148, 178, 255, 0.14);
-    --border-strong: rgba(148, 178, 255, 0.28);
-    --text: #e8edf7;
-    --text-dim: #9aa7bf;
-    --accent: #4f8cff;
-    --accent-2: #7c5cff;
-    --accent-3: #38c6d9;
-    --gradient: linear-gradient(135deg, #4f8cff 0%, #7c5cff 55%, #38c6d9 100%);
+    --border: rgba(223, 180, 90, 0.16);
+    --border-strong: rgba(223, 180, 90, 0.32);
+    --text: #ede9df;
+    --text-dim: #a3a8b4;
+    --accent: #dfa843;
+    --accent-2: #c96f4a;
+    --accent-3: #3bb3a9;
+    --gradient: linear-gradient(135deg, #f0c869 0%, #dfa843 45%, #3bb3a9 100%);
     --radius: 18px;
     --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
     --font-body: "Inter", system-ui, -apple-system, sans-serif;
+    --font-arabic: "Noto Kufi Arabic", "Geeza Pro", sans-serif;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -40,7 +41,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  ::selection { background: rgba(79, 140, 255, 0.35); }
+  ::selection { background: rgba(223, 168, 67, 0.35); }
 
   /* ---------- Background glow ---------- */
   .bg-glow {
@@ -48,9 +49,9 @@
     inset: 0;
     z-index: -1;
     background:
-      radial-gradient(ellipse 60% 45% at 18% -5%, rgba(79, 140, 255, 0.16), transparent 60%),
-      radial-gradient(ellipse 55% 40% at 85% 8%, rgba(124, 92, 255, 0.13), transparent 60%),
-      radial-gradient(ellipse 70% 50% at 50% 110%, rgba(56, 198, 217, 0.08), transparent 60%),
+      radial-gradient(ellipse 60% 45% at 18% -5%, rgba(223, 168, 67, 0.13), transparent 60%),
+      radial-gradient(ellipse 55% 40% at 85% 8%, rgba(201, 111, 74, 0.10), transparent 60%),
+      radial-gradient(ellipse 70% 50% at 50% 110%, rgba(59, 179, 169, 0.10), transparent 60%),
       linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 50%, var(--bg-0) 100%);
   }
 
@@ -58,10 +59,9 @@
     position: fixed;
     inset: 0;
     z-index: -1;
-    background-image:
-      linear-gradient(rgba(148, 178, 255, 0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(148, 178, 255, 0.035) 1px, transparent 1px);
-    background-size: 56px 56px;
+    /* Khatam (eight-pointed star) lattice — two overlapping rotated squares per tile */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Cg fill='none' stroke='rgba(223,180,90,0.07)'%3E%3Crect x='28' y='28' width='40' height='40'/%3E%3Crect x='28' y='28' width='40' height='40' transform='rotate(45 48 48)'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 96px 96px;
     mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 75%);
     -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 75%);
   }
@@ -96,7 +96,7 @@
     background: var(--gradient);
     display: grid; place-items: center;
     flex-shrink: 0;
-    box-shadow: 0 4px 18px rgba(79, 140, 255, 0.35);
+    box-shadow: 0 4px 18px rgba(223, 168, 67, 0.35);
   }
   .brand-mark svg { width: 22px; height: 22px; }
   .brand-text { display: flex; flex-direction: column; line-height: 1.25; }
@@ -130,7 +130,7 @@
     color: var(--text) !important;
     transition: background 0.2s ease, border-color 0.2s ease;
   }
-  .nav-cta:hover { background: rgba(79, 140, 255, 0.18); border-color: var(--accent); }
+  .nav-cta:hover { background: rgba(223, 168, 67, 0.16); border-color: var(--accent); }
 
   .menu-btn {
     display: none;
@@ -217,10 +217,10 @@
   }
   .btn-primary {
     background: var(--gradient);
-    color: #fff;
-    box-shadow: 0 8px 28px rgba(79, 140, 255, 0.35);
+    color: #1a1206;
+    box-shadow: 0 8px 28px rgba(223, 168, 67, 0.3);
   }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(79, 140, 255, 0.5); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(223, 168, 67, 0.45); }
   .btn-ghost {
     background: var(--surface);
     color: var(--text);
@@ -288,8 +288,8 @@
     border-radius: 14px;
     display: grid; place-items: center;
     margin-bottom: 22px;
-    background: rgba(79, 140, 255, 0.12);
-    border: 1px solid rgba(79, 140, 255, 0.25);
+    background: rgba(223, 168, 67, 0.1);
+    border: 1px solid rgba(223, 168, 67, 0.28);
   }
   .mv-icon svg { width: 26px; height: 26px; stroke: var(--accent); }
   .mv-card h3 {
@@ -314,11 +314,11 @@
     display: grid; place-items: center;
     margin-bottom: 20px;
     background: var(--gradient);
-    box-shadow: 0 6px 20px rgba(79, 140, 255, 0.3);
+    box-shadow: 0 6px 20px rgba(223, 168, 67, 0.28);
     transition: transform 0.3s ease;
   }
   .sol-card:hover .sol-icon { transform: scale(1.08) rotate(-4deg); }
-  .sol-card .sol-icon svg { width: 25px; height: 25px; stroke: #fff; }
+  .sol-card .sol-icon svg { width: 25px; height: 25px; stroke: #1a1206; }
   .sol-card h3 {
     font-family: var(--font-display);
     font-size: 1.22rem;
@@ -356,8 +356,8 @@
     flex-shrink: 0;
     border-radius: 11px;
     display: grid; place-items: center;
-    background: rgba(79, 140, 255, 0.12);
-    border: 1px solid rgba(79, 140, 255, 0.25);
+    background: rgba(223, 168, 67, 0.1);
+    border: 1px solid rgba(223, 168, 67, 0.28);
   }
   .info-row .info-icon svg { width: 20px; height: 20px; stroke: var(--accent); }
   .info-row h4 {
@@ -398,7 +398,7 @@
   .form-group textarea:focus {
     outline: none;
     border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(79, 140, 255, 0.18);
+    box-shadow: 0 0 0 3px rgba(223, 168, 67, 0.18);
   }
   .form-group input::placeholder,
   .form-group textarea::placeholder { color: rgba(154, 167, 191, 0.5); }
@@ -458,6 +458,40 @@
     flex-wrap: wrap;
   }
 
+  /* ---------- Omani accents ---------- */
+  .arabic { font-family: var(--font-arabic); }
+
+  .ar-label {
+    font-family: var(--font-arabic);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--accent);
+    float: right;
+  }
+
+  /* Dhow line-art anchored in the hero */
+  .dhow {
+    position: absolute;
+    right: 3%;
+    bottom: -8px;
+    width: min(330px, 28vw);
+    color: rgba(223, 180, 90, 0.16);
+    pointer-events: none;
+  }
+
+  /* Fort-wall crenellation divider */
+  .crenel {
+    max-width: 1120px;
+    margin: 0 auto;
+    height: 9px;
+    opacity: 0.55;
+    background:
+      repeating-linear-gradient(90deg, var(--border-strong) 0 22px, transparent 22px 44px) top / 100% 7px no-repeat,
+      linear-gradient(var(--border-strong), var(--border-strong)) bottom / 100% 2px no-repeat;
+    mask-image: linear-gradient(90deg, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 15%, black 85%, transparent);
+  }
+
   /* ---------- Reveal animation ---------- */
   .reveal {
     opacity: 0;
@@ -488,6 +522,7 @@
     .menu-btn { display: flex; }
 
     .hero { padding: 140px 0 80px; }
+    .dhow { display: none; }
     section { padding: 72px 0; }
     .mv-grid, .solutions-grid, .contact-grid { grid-template-columns: 1fr; }
     .glass-card { padding: 32px 26px; }
@@ -506,9 +541,9 @@
     <nav class="nav">
       <a href="#" class="brand" aria-label="Paradise Harbours SPC — Home">
         <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2 L20 7 V17 L12 22 L4 17 V7 Z"/>
-            <circle cx="12" cy="12" r="3.2"/>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1a1206" stroke-width="1.6" stroke-linejoin="round">
+            <rect x="7" y="7" width="10" height="10"/>
+            <rect x="7" y="7" width="10" height="10" transform="rotate(45 12 12)"/>
           </svg>
         </span>
         <span class="brand-text">
@@ -538,7 +573,7 @@
   <div class="container">
     <div class="hero-badge reveal">
       <span class="dot" aria-hidden="true"></span>
-      AI-Powered Platforms · Built in Oman
+      Built in Oman · <span class="arabic" lang="ar">صُنع في عُمان</span>
     </div>
     <h1 class="reveal">Intelligent Tools for Businesses That <span class="gradient-text">Refuse to Stay Small</span></h1>
     <p class="reveal">Paradise Harbours builds next-generation AI platforms that help small businesses and entrepreneurs automate daily workflows, scale with confidence, and take full control of their operations — effortlessly.</p>
@@ -550,12 +585,20 @@
       <a href="#solutions" class="btn btn-ghost">Explore Our Solutions</a>
     </div>
   </div>
+  <svg class="dhow" viewBox="0 0 420 260" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" aria-hidden="true">
+    <path d="M30 196 C120 230 300 230 390 196 L352 226 C250 248 170 248 68 226 Z"/>
+    <path d="M156 30 C196 84 226 140 240 196 L150 196 C144 140 146 86 156 30 Z"/>
+    <path d="M280 84 C300 120 314 158 320 196 L262 196 C260 158 266 120 280 84 Z"/>
+    <path d="M156 30 L192 40 L156 50"/>
+  </svg>
 </section>
+
+<div class="crenel" aria-hidden="true"></div>
 
 <!-- ================= MISSION & VISION ================= -->
 <section id="mission">
   <div class="container">
-    <span class="section-label reveal">Who We Are</span>
+    <span class="section-label reveal">Who We Are · <span class="arabic" lang="ar">من نحن</span></span>
     <h2 class="section-title reveal">Purpose-Built AI, Human-Centered Design</h2>
     <p class="section-sub reveal">We believe world-class technology shouldn't be reserved for enterprises with deep pockets. Everything we build starts with one question: does this make running a business genuinely easier?</p>
 
@@ -566,7 +609,7 @@
             <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
           </svg>
         </div>
-        <h3>Our Mission</h3>
+        <h3>Our Mission <span class="ar-label" lang="ar">مهمتنا</span></h3>
         <p>To democratize artificial intelligence by delivering accessible, intuitive, and adaptive AI platforms that enable small businesses to streamline operations, eliminate repetitive friction, and compete at scale.</p>
       </div>
 
@@ -576,7 +619,7 @@
             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
           </svg>
         </div>
-        <h3>Our Vision</h3>
+        <h3>Our Vision <span class="ar-label" lang="ar">رؤيتنا</span></h3>
         <p>To be the leading catalyst for digital transformation in the Middle East and beyond, pioneering human-centric AI solutions that empower entrepreneurs to build sustainable, self-sufficient enterprises.</p>
       </div>
     </div>
@@ -586,7 +629,7 @@
 <!-- ================= SOLUTIONS ================= -->
 <section id="solutions">
   <div class="container">
-    <span class="section-label reveal">What We Build</span>
+    <span class="section-label reveal">What We Build · <span class="arabic" lang="ar">ما نبنيه</span></span>
     <h2 class="section-title reveal">Solutions That Work While You Grow</h2>
     <p class="section-sub reveal">From day-to-day automation to intelligent decision-making, our platforms are engineered to remove friction at every layer of a growing business.</p>
 
@@ -641,7 +684,7 @@
 <!-- ================= CONTACT ================= -->
 <section id="contact">
   <div class="container">
-    <span class="section-label reveal">Contact</span>
+    <span class="section-label reveal">Contact · <span class="arabic" lang="ar">تواصل معنا</span></span>
     <h2 class="section-title reveal">Let's Build Something Together</h2>
     <p class="section-sub reveal">Whether you're an entrepreneur with an idea or a business ready to automate, we'd love to hear from you.</p>
 
@@ -722,6 +765,7 @@
 </section>
 
 <!-- ================= FOOTER ================= -->
+<div class="crenel" aria-hidden="true"></div>
 <footer>
   <div class="container">
     <div class="footer-inner">
@@ -741,7 +785,7 @@
     </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> Paradise Harbours SPC. All rights reserved.</span>
-      <span>Registered in the Sultanate of Oman · CR 1615460</span>
+      <span>Registered in the Sultanate of Oman · CR 1615460 · <span class="arabic" lang="ar">سلطنة عُمان</span></span>
     </div>
   </div>
 </footer>
